@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Docs-like Editor with Enhanced Features</title>
+    <!-- Include Quill CSS from CDN -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar-container">
+        <!-- Create the toolbar with desired features -->
+        <div id="toolbar">
+            <!-- Font Options -->
+            <select class="ql-font">
+                <option selected></option>
+                <option value="serif"></option>
+                <option value="monospace"></option>
+            </select>
+
+            <!-- Numeric Font Size Options -->
+            <select id="font-size" class="ql-size">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+                <option value="72">72</option>
+            </select>
+
+            <!-- Text Formatting -->
+            <button class="ql-bold"></button>
+            <button class="ql-italic"></button>
+            <button class="ql-underline"></button>
+
+            <!-- Align Options -->
+            <select class="ql-align"></select>
+
+            <!-- Text Color and Background Highlight -->
+            <select class="ql-color"></select>
+            <select class="ql-background"></select>
+
+            <!-- Bulleted and Numbered Lists, Check List -->
+            <button class="ql-list" value="ordered"></button>
+            <button class="ql-list" value="bullet"></button>
+            <button class="ql-list" value="check"></button>
+
+            <!-- Indent Options -->
+            <button class="ql-indent" value="-1"></button>
+            <button class="ql-indent" value="+1"></button>
+
+            <!-- Insert Image -->
+            <button class="ql-image"></button>
+
+            <!-- Page Color Picker -->
+            <label for="pageColor">Page Color:</label>
+            <input type="color" id="pageColor" name="pageColor" value="#ffffff">
+        </div>
+
+        <!-- Repositioned Download and New Document buttons -->
+        <div class="document-actions">
+            <!-- File format download options -->
+            <select id="downloadFormat">
+                <option value="html">Download as HTML</option>
+                <option value="pdf">Download as PDF</option>
+                <option value="docx">Download as DOCX</option>
+            </select>
+
+            <!-- Download Button -->
+            <button id="download-btn">Download Document</button>
+
+            <!-- New Document Button -->
+            <button id="new-doc-btn">New Document</button>
+        </div>
+    </div>
+
+    <!-- Create the editor -->
+    <div id="editor">
+        <p>Start writing your document here...</p>
+    </div>
+
+    <!-- Include Quill JS, jsPDF for PDF, and docx.js for DOCX -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.1/docx.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
